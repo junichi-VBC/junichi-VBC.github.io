@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>youi-mixStudio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo-area">
+                <img src="./images/YOUIlogo2.png" alt="" class="logo" />
+                <h2>Youi-mixStudio</h2>
+            </div>
+
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sample.html">sample</a></li>
+                    <li><a href="charage.html">charge</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+<!-- infomation section -->
+  <div class="infomation">
+    <div class="overlay"></div>
+    <!-- class “pc” にしているが、record.pngを使用 -->
+    <img src="./images/record.png" class="pc">
+    <div class="rotatable">
+      <div id="circle"></div>
+      <div id="features-wrapper">
+        <div class="feature one">
+          <img src="./images/Dark.png" alt=""> 
+          <div>
+            <h1>Mastering</h1>
+            <p>Achievements</p>
+          </div>
+        </div>
+        <div class="feature two">
+          <img src="./images/youtube_social_circle_dark.png" alt=""> 
+          <div>
+            <h1>Youtbe</h1>
+            <p>Achievements</p>
+          </div>
+        </div>
+        <div class="feature three">
+          <img src="./images/logo-black.png" alt=""> 
+          <div>
+          <h1>@youi__241</h1>
+          <a href="https://twitter.com/youi__241" target="_blank">https://x.com/youi__241</a>
+          </div>
+        </div>
+        <div class="feature four">
+          <img src="./images/Liceria & Co..png" alt=""> 
+          <div>
+            <h1>Audio</h1>
+            <p>Achievements</p>
+          <audio controls>
+            <source src="sample.mp3" type="audio/mp3">
+            お使いのブラウザではオーディオを再生できません。
+          </audio>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="control">
+      <img src="./images/arrow.png" id="upBtn" /> 
+      <h3>Feature</h3>
+      <img src="./images/arrow.png" id="downBtn" />
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
