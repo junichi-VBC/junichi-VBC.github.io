@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    font-family: "Unna", serif;
+    font-size: 1.2rem;
+    width: 100vm;
+    height: 100vh;
+    background: linear-gradient(to right, #ff9d9d, #f9ff9f);
+    overflow: hidden;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    width: 80%;
+    margin: 20px auto;
+    align-items: center;
+    font-weight: 550;
+    position: sticky;
+    z-index: 2;
+    
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links li {
+    list-style: none;
+}
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 20%;
+    height: 20%;
+    margin-right: 12px;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    padding: 0 2rem;
+}
+
+.nav-links ul a{
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;  
+    transition: 0.3s; 
+}
+
+.nav-links ul a:hover{
+    color: #dc04f8;
+}
+
+.infomation {
+    width: 1000px;
+    height: 1000px;
+    position: relative; /* これが重要！ */
+    top: 50%;
+    left: -10%;
+    transform: translateY(-50%);
+}
+
+.rotatable {
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    top: -70px;
+    left: 0;
+    transition: 1s;
+    z-index: 2;
+}
+
+#circle {
+    width: 1000px;
+    height: 1000px;
+    /*background: #ccc;*/
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+    z-index: 1; /* 必要なら追加 */
+    transition: 1s;
+}
+
+.pc {
+    width: 400px;
+    position: absolute;
+    top: 40%;
+    left: 27%;
+    transform: translateY(-40%);
+    z-index: 4; /*追加 */
+}
+
+.feature {
+    display: flex;
+    position: absolute;
+    color: white;
+    z-index: 1; /*追加 */
+}
+
+.feature img {
+    width: 70px;
+    z-index: 1;
+    position: relative;
+}
+
+.feature div {
+    margin-left: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.feature div a {
+    margin-top: 8px;
+}
+
+.one {
+    top: 450px;
+    right: 120px;
+}
+
+.two {
+    top: 200px;
+    left: 380px;
+    transform: rotate(-90deg);
+}
+
+.three {
+    bottom: 450px;
+    left: 60px;
+    transform: rotate(-180deg);
+}
+
+.four {
+    bottom: 120px;
+    right: 290px;
+    transform: rotate(-270deg);
+}
+
+.control {
+    position: absolute;
+    top: 40%;
+    right: -75%; /* まずは0で試してください */
+    transform: translateY(-40%);
+    text-align: center;
+    z-index: 1;
+}
+
+.control img {
+    width: 15%;
+}
+
+.control h3 {
+    color: #fff;
+    margin: 20px 0;
+}
+
+#upBtn {
+    cursor: pointer;
+}
+
+#downBtn {
+    cursor: pointer;
+    transform: rotate(-180deg);
+}
+
+.overlay {
+
+    width: 0;
+    height: 0;
+    border-top: 520px solid #fff;
+    border-right : 520px solid transparent;
+    border-bottom: 520px solid #fff;
+    border-left: 520px solid #fff;
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    pointer-events: none;
+}
+
+.price-list {
+    width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.price-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.price-list ul li {
+    margin-bottom: 1.5em;
+}
+
+.price-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    margin-bottom: 0.3em;
+    margin-left: 0;
+    white-space: nowrap; /* タイトルが改行されないように */
+    word-break: keep-all; /* 長い単語が改行されないように */
+}
+
+.price-detail {
+    text-align: left;
+    margin-left: 1em;
+    color: #000000;
+    font-size: 1em;
+    text-align: left;       /* 各要素も左寄せ */
+    margin-left: 0;
+}
+
+.price-list li {
+    opacity: 0;
+    transition: opacity 0.7s;
+}
+.price-list li.visible {
+    opacity: 1;
+}
+
+.price-anim {
+    text-align: left;
+    margin-left: 0;
+    display: block;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.7s;
+    white-space: nowrap; /* タイトルが改行されないように */
+    word-break: keep-all; /* 長い単語が改行されないように */  
+}
+
+.price-anim.visible {
+    opacity: 1;
+}
+
+.contact-form {
+    text-align: center;
+}
+
+.contact-form iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+.sample-video {
+    opacity: 0;
+    transition: opacity 1.5s;
+    text-align: center; /* 中央寄せ */
+}
+.sample-video.visible {
+    opacity: 1;
+}
+.sample-video video {
+    display: inline-block;
+    margin: 1em 0;
+}
